@@ -26,4 +26,5 @@ features = ["alloc"]
 path = "../test_helpers"
 
 [dev-dependencies]
+rand = "0.8"
 std_float = { path = "../std_float/", features = ["as_crate"] }
