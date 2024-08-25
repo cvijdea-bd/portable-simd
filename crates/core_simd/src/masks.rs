@@ -2,14 +2,7 @@
 //! Types representing
 #![allow(non_camel_case_types)]
 
-#[cfg_attr(
-    not(all(target_arch = "x86_64", target_feature = "avx512f")),
-    path = "masks/full_masks.rs"
-)]
-#[cfg_attr(
-    all(target_arch = "x86_64", target_feature = "avx512f"),
-    path = "masks/bitmask.rs"
-)]
+#[path = "masks/full_masks.rs"]
 mod mask_impl;
 
 use crate::simd::{LaneCount, Simd, SimdCast, SimdElement, SupportedLaneCount};
